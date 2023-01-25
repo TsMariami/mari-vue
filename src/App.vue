@@ -1,6 +1,7 @@
 <script>
 
 export default{
+
  data() {
     return {
       placeholder: '    search',
@@ -45,7 +46,7 @@ export default{
   font-weight: 700;
   margin-left: 40px;
 }
-nav {
+li {
   display: flex;
 
 }
@@ -84,11 +85,11 @@ input{
   
     <div class="nav">
         <nav>
-        <a :href= "item.URL" class="container-fluid" v-for= " item in menulist" :key="item.id"
-         >
+        <li>
+        <a :href= "item.URL" class="container-fluid" v-for= " item in menulist" :key="item.id">
   {{ item.title }}
-        </a>
-        <input type="text"  :placeholder='placeholder'>
+        </a> 
+        <input type="text"  :placeholder='placeholder'></li>
   </nav>
     </div>
 </template>
