@@ -4,12 +4,28 @@ export default{
  data() {
     return {
       placeholder: '    search',
-        mylist: [ 
-           
-          "Home",
-          "Products",
-          "Contact us",
-          "info"
+        menulist: [ 
+        {
+            id: 1,
+            title: 'home',
+            URL : 'http://localhost:5173/'
+           },
+           {
+            id: 2,
+            title: 'products',
+            URL : 'http://localhost:5173/'
+           },
+           {
+            id: 3,
+            title: 'contact us',
+            URL : 'http://localhost:5173/'
+           },
+           {
+            id: 4,
+            title: 'info',
+            URL : 'http://localhost:5173/'
+           },
+       
        ]
     }
   }
@@ -29,7 +45,7 @@ export default{
   font-weight: 700;
   margin-left: 40px;
 }
-.navbar {
+nav {
   display: flex;
 
 }
@@ -39,13 +55,12 @@ h1{
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
+    transition: 0.4s;
+} 
 
-@media (hover: hover) {
+  @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsl(0, 96%, 69%);
   }
 }
 
@@ -68,9 +83,10 @@ input{
 <template>
   
     <div class="nav">
-        <nav class="navbar bg-dark" data-bs-theme="dark">
-        <a class="container-fluid" v-for="item in mylist">
-  {{ item }}
+        <nav>
+        <a :href= "item.URL" class="container-fluid" v-for= " item in menulist" :key="item.id"
+         >
+  {{ item.title }}
         </a>
         <input type="text"  :placeholder='placeholder'>
   </nav>
