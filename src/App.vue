@@ -1,102 +1,60 @@
 <script>
-import Menu from './list.vue'
+import list from './list.vue'
 export default{
-   components : {
-    Menu
-   },
- data() { 
-    return {
-        menulist: [
-        {
-            id: 1,
-            title: 'Home',
-            URL : 'http://localhost:5173/',
-            description : 'description of "Home"',
-           
-           },
-           {
-            id: 2,
-            title: 'Products',
-            URL : 'http://localhost:5173/',
-            description : 'description of "Products"',
-           
-           },
-           {
-            id: 3,
-            title: 'Contact us',
-            URL : 'http://localhost :5173/',
-            description : 'description of "Contact us"',
-           
-           },
-           {
-            id: 4,
-            title: 'Info',
-            URL : 'http://localhost:5173/',
-            description : 'description of "Info"',
-           
-           },    
-       ]
+  components: {
+     list
+  },
+  data (){
+    return{
+      todolist: [
+      {id: 1,
+        title:'to do item 1',
+        done: false
+        },
+       {id: 2,
+        title:'to do item 2',
+        done: true
+      } ,
+        {id: 3,
+        title:'to do item 3',
+        done: false
+        } ,
+        {id: 4,
+        title:'to do item 4',
+        done: true
+        },
+         {id: 5,
+        title:'to do item 5',
+        done: false
+        }
+      ]
     }
   },
+   computed: {
+     filteredtodolistitem(){
+       return this.todolist.filter(item => item.done == true)
+     },
+     falsetodos(){
+      return this.todolist.filter(item=> item.done == false)
+     }
+     
+   }
+
+    
 }
 </script> 
 
 
 <template>
-  <Menu :menulist = "menulist"></Menu>
+  <h1>all items</h1>
+    <list :data="todolist" />
+    <h1>done items</h1>
+    <list :data="filteredtodolistitem" />
+    <h1>active items</h1>
+    <list :data="falsetodos" />
 </template>
 
 
 
- <!-- <script>
 
- export default {
-   data() {
-     return {
-       width: 50,
-       height: 30,
-       simagle: null,
-       show: false,
-       backgroundcolor: null
-     }
-   },
-   computed: {
-     calculateSpace(){
-       return this.width 
-     },
-     calculateMoculoba(){
-       return this.calculateSpace * this.simagle
-     }
-   }
- }
  
- </script>
- 
- <template>
-   <div>
-     <form>
- 
-       <label>სიგრძე</label><br />
-       <input v-model="width" /><br />
- 
-       <label>სიგანე</label><br />
-       <input v-model="height" /><br />
-       
-       <label>სიმაღლე</label><br />
-       <input v-model="simagle" /><br />
-     </form>
-     <br />
-     <button @click.prevent="show = !show">
-       <span v-if="!show">Show</span>
-       <span v-if="show">Hide</span>
-     </button>
-     <p v-if="show">ფართობი: {{ calculateSpace }}</p>
-     <p v-if="show">მოცულობა: {{ calculateMoculoba }}</p>
-   </div>
-    <br>
-    <input type="color" v-model="backgroundcolor" >
-    <br>
-    <br>
-   <div class="square" :style="{ width: width + 'px', height: height + 'px' , border: '5px solid' , background: backgroundcolor }"> </div>
-    
-  </template> -->
