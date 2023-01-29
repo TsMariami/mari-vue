@@ -1,4 +1,6 @@
-<script>
+<!-- <script>
+import { findDir } from '@vue/compiler-core'
+
 export default{
     props : { 
       menulist: {type: Array, required: true}
@@ -6,13 +8,15 @@ export default{
 
     data : function() { 
        return {
-        show: true
+       show: false,
+       
        }
      },
      methods: {
-      showorhide(x) {
+      showorhide(e) {
         this.show = !this.show
-        
+          console.log(e.target)
+      console.log( find(item => item.id == '3'))
       }
     
       
@@ -35,7 +39,6 @@ export default{
      </nav> 
      </div>
      <br>
-      <!-- <button  v-if="show">bla</button> -->
    </template>
    
    
@@ -75,4 +78,4 @@ export default{
    }
    
    </style>
-   
+    -->
