@@ -1,65 +1,21 @@
-<script>
-    import axios from 'axios'
+<script setup>
+import file from './file'
+import list from './list.vue'
 
-    export default{
-      data() {
-        return {
-          range: [5, 10, 20],
-          limit: 5,
-          langs: ['ge', 'en'],
-          lang: 'ge',
-          apiUrl: "http://items.magischer.de/api/products",
-          products: [],
-          res: null,
-        }
-      },
-      methods: {
-    function(url = this.apiUrl){ 
-        axios.get(url, {
-             params: {
-             limit: this.limit,
-             lang: this.lang
-          }
-        }).then((response) =>{
-          this.res = response.data ,
-          this.products = response.data.data
-         })
-      }  ,
-         nextPage(){
-        this.function(this.res?.next_page_url)
-      },
-        previousPage(){
-        this.function(this.res?.prev_page_url)
-      },
-        firstPage(){
-        this.function(this.res?.first_page_url)
-      },
-      lastPage(){
-       this.function(this.res?.last_page_url)
-      },
-      changelang(e){  
-        this.lang = e.target.value
-        this.function()
-    },
-    changelimit(e){
-      this.limit = e.target.value
-        this.function()
-    }
-  },
-  mounted() {
-    this.function()
-  },
-}
-  
+const {products, getApiData ,gama,limits, langs, changelang, changelimit,  } = file()
+ 
+
 </script>
+  
 
 <template>
+  <!-- <list :data="products"/> -->
   <select @change="changelang">
     <option v-for="language in langs" :key="language.index" :value="language" >
     {{ language }} </option>
   </select> 
   <select @change="changelimit">
-    <option v-for="amount in range" :key="amount.index" :value="amount" >
+    <option v-for="amount in limits" :key="amount.index" :value="amount" >
     {{ amount }} </option>
   </select>
   <table>
@@ -78,10 +34,14 @@
       </tr>
     </tbody>
   </table>
-  <a href="#" @click.prevent="firstPage" style="float : left" >first page</a>
-  <button style="float : left" :disabled="!res?.prev_page_url" @click.prevent="previousPage" > previous</button>
-   <button  :disabled="!res?.next_page_url" style="float : right" @click.prevent="nextPage">next</button>
-   <a href="#" @click.prevent="lastPage" style="float : right" >last page</a>
+  <div>
+    <button @click.prevent="getApiData(gama.first_page_url)"  :disabled=" !gama?.first_page_url"  style="float : right"> first page </button>
+    <button @click.prevent="getApiData(gama.prev_page_url)" :disabled=" !gama?.prev_page_url"  style="float : left"> prev page</button>
+    <button @click.prevent="getApiData(gama?.next_page_url)" :disabled=" !gama?.next_page_url"  style="float : right">next page</button>
+    <button @click.prevent="getApiData(gama.last_page_url)"  :disabled=" !gama?.last_page_url"  style="float : left">last page</button>
+
+  </div>
+
 </template>
 
  

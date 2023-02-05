@@ -1,28 +1,20 @@
-<script>
+<script setup> 
+import file from './file'
 import allitems from './allitems.vue'
- export default{
-  props: {
-     data: { type: Array, required:true},
+   const props = defineProps({
+    data: { type: Array, required:true},
      changeStatus : {type:Boolean, required: false , default: false},
      delete: {type:Boolean, required: false , deffiault: false},
-     
- },
- components: {
-    allitems
- },
- mounted(){
-  
- },
- methods: {
-  changeDone(item){
-    this.$emit("changeDone" , item )
+   })
 
-  },
-  deleteDoneItem(data){
+  function changeDone(item){
+   this.$emit("changeDone" , item )
+
+  }
+  function deleteDoneItem(data){
    this.$emit('onDelete', data)
   } 
- },
- }
+
 </script>
 
 

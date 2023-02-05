@@ -1,25 +1,22 @@
-<script>
- export default{
-  props: {
-     item: { type: Object, required:true},
+<script setup>
+import {computed} from 'vue'
+  const props = defineProps({
+      item: { type: Object, required:true},
      change: {type: Boolean, required: true},
      Delete: {type: Boolean, required: true},
-
- },
- methods: {
-   onChange(){
+  })
+  function onChange(){
     this.$emit("onChange", this.item )
-   },
-   onDelete(){
+   }
+   function onDelete(){
     this.$emit("onDelete" , this.item)
    }
- },
- computed: {
-     ischecked(){
-       return this.item.done ?  'checked' : '' 
-   } 
-  }
- }
+
+//  computed: {
+//      ischecked(){
+//        return this.item.done ?  'checked' : '' 
+//    } 
+  // }
 </script>
 
 
@@ -30,7 +27,7 @@
     :checked="item.done"
     @change="onChange"
     v-if="change">
-    {{ item.id }} - {{ item.title}}
+    {{ item.id }} - {{ item.name}}
     <button v-if="Delete" @click="onDelete">delete</button>
   </li>
 </template> 
