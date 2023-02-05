@@ -10,11 +10,11 @@ const {products, getApiData ,gama,limits, langs, changelang, changelimit,  } = f
 
 <template>
   <!-- <list :data="products"/> -->
-  <select @change="changelang">
+  <select @change.prevent="changelang">
     <option v-for="language in langs" :key="language.index" :value="language" >
     {{ language }} </option>
   </select> 
-  <select @change="changelimit">
+  <select @change.prevent="changelimit">
     <option v-for="amount in limits" :key="amount.index" :value="amount" >
     {{ amount }} </option>
   </select>

@@ -7,7 +7,7 @@ const url = "http://items.magischer.de/api/products"
 const limits = [ 5, 10, 15, 20]
 const langs = ['eng', 'ge']
 const limit = ref(5)
-const lang = ref( 'en')
+const lang = ref('en')
 const products = ref([])
 const  gama = ref()
 
@@ -25,12 +25,13 @@ function getApiData(thisurl = url){
 
 
 function changelang(e){  
-    lang = e.target.value
+    lang.value = e.target.value
     getApiData ()
+    console.log(changelang)
 }
 function changelimit(e){
-  limit = e.target.value
-  getApiData()
+   limit.value = e.target.value
+   getApiData()
 }
 
 
