@@ -1,7 +1,5 @@
 <script setup>
-// import store from './store';
 import actionButton from './actionButton.vue';
-import addviainput from './addviainput.vue'
 defineProps({
   data: { type: Object, requiered: true },
   action: { type: String, required: false, default: 'add' },
@@ -19,9 +17,8 @@ defineProps({
     <p >Video Link : <a :href="data.url" class="text-blue-600 ">
       {{ data.url }}</a></p>
   </div>
-
-  <p class="mt-20 mb-20"><actionButton  :itemId="data.id" :action="action" /></p>
-   <addviainput :itemId="data.id" :action="action"  />
+  <p class="mt-20 mb-20">
+    <actionButton  :itemId="data.id" :action="action" />
+  </p>
   
-
 </template> 

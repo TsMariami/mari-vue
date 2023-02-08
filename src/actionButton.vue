@@ -9,7 +9,7 @@ import { useStore } from 'vuex'
         const store = useStore()
 
         function addToCart(e) {
-            store.dispatch('additemtowatchlist', props.itemId)
+            store.dispatch('pushiteminwatchlist', props.itemId)
         }
         function RemoveFromCart(e) {
             store.dispatch('deleteitemfromwatchlist', props.itemId)

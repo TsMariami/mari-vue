@@ -11,20 +11,20 @@ import addviainput from './addviainput.vue'
                 { id: 5, name: 'The Real Slim Shady', url:'ttps://www.youtube.com/embed/eJO5HU_7_1w' , description:'The Real Slim Shady by Eminem', cover:'https://i.scdn.co/image/ab67616d0000b273dbb3dd82da45b7d7f31b1b42',  },
             ],
             watchlist: [],
+        }},
             mutations: {
              deleteitemfromwatchlist (state, payload) {
                 let item = store.state.watchlist.find(item => item.id === payload)
                 state.watchlist.splice(state.watchlist.indexOf(item), 1)
                 state.songs.push(item)
-            }
-          },
+            },
           
-            additemtowatchlist(state, payload) {
-                let item = state.songs.find(item => item.id === payload)
+            pushiteminwatchlist (state, payload) {
+                let item = store.state.songs.find(item => item.id === payload)
                 state.watchlist.push(item)
                 state.songs.splice(state.songs.indexOf(item), 1)
-        
             },
+        },
             getters: {
                 getsongs(state){
                     return state.songs
@@ -35,18 +35,17 @@ import addviainput from './addviainput.vue'
             },
             actions:{
            
-                additemtowatchlist({ commit }, payload) {
-                    commit('additemtowatchlist', payload)
+                pushiteminwatchlist({ commit }, payload) {
+                    commit('pushiteminwatchlist', payload)
                 },
-            
-            
                 deleteitemfromwatchlist({ commit }, payload) {
                     commit('deleteitemfromwatchlist', payload)
+                },
+                pushnewiteminAll ({commit}, payload){
+                    commit('pushnewiteminAll', payload)
                 }
-            }
-            }
-            
-        }})
+            }   
+        })
        
 
 export default store
