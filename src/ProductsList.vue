@@ -2,15 +2,16 @@
 import { useStore } from "vuex"
 import { computed } from "vue"
 import ListItemComponent from "./ListItemComponent.vue"
-    defineProps({title: String})
+// import store from "./store";
+defineProps({
+title: String })
     const store = useStore()
-    const data = store.getters.getproducts
+    const data = store.getters.getsongs
 </script>
 <template>
-    <div class="flex flex-col space-y-2 mx-10 mt-9 ">
-        <h2 class="font-bold text-xl text-green-600">{{ title }}</h2>
-        <ul>
-            <ListItemComponent v-for="item in data" :key="item.index" :data="item" />
-        </ul>
+ 
+    <div class="flex flex-col space-y-2 mx-10 mt-9 ">  
+          <h2 class="font-bold text-xl text-green-600">{{ title }}</h2>
+            <ListItemComponent v-for="item in data" :key="item.id" :data="item" />
     </div>
 </template>

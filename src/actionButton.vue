@@ -7,14 +7,15 @@ import { useStore } from 'vuex'
         const AddButton = "focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800  ml-3"
         const RemoveButton = "focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
         const store = useStore()
+
         function addToCart(e) {
-            store.dispatch('additemtocart', props.itemId)
+            store.dispatch('additemtowatchlist', props.itemId)
         }
         function RemoveFromCart(e) {
-            store.dispatch('deleteitemfromcart', props.itemId)
+            store.dispatch('deleteitemfromwatchlist', props.itemId)
         }
 </script>
 <template>
-    <button v-if="action === 'add'" @click.prevent="addToCart" type="button" :class="AddButton">Add To Cart</button>
-    <button v-else @click.prevent="RemoveFromCart" type="button" :class="RemoveButton">Remove From Cart</button>
+    <button v-if="action === 'add'" @click.prevent="addToCart" type="button" :class="AddButton">Add To Watclist</button>
+    <button v-else @click.prevent="RemoveFromCart" type="button" :class="RemoveButton">Remove From Watclist</button>
 </template>

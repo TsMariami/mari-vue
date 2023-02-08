@@ -6,7 +6,7 @@ import ListItemComponent from './ListItemComponent.vue'
         title: String 
      })
         const store = useStore()
-        const data = store.getters.getcart
+        const data = store.getters.getwatchlist
 </script>
 <template>
     <div class="flex flex-col space-y-2 mx-10 mt-9 ">
