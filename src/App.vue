@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import ProductsList from './ProductsList.vue'
 import Cart from './Cart.vue'
 const pageTitle = "5 Fav songs"
@@ -13,9 +13,10 @@ const pageTitle = "5 Fav songs"
       <Cart :title="'WatchList'" class="mx-10 mt-8" />
     </div>
   </div>
-</template> 
+</template>  -->
 
-<!-- <script setup>
+<script setup>
+
     const menu =  [
     { routeName: 'Home', title: 'Main Page'},
   { routeName: 'About', title: 'About Us'},   
@@ -37,13 +38,7 @@ const pageTitle = "5 Fav songs"
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
       <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Docs
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Examples
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-        Blog
+        <RouterLink class="mr-32 mt-8" v-for="item in menu" :key="item.index" :to="{name: item.routeName}" > {{ item.title }} </RouterLink>
       </a>
     </div>
     <div>
@@ -52,8 +47,7 @@ const pageTitle = "5 Fav songs"
   </div>
 </nav>
   <div class="container ml-32 ">
-    <RouterLink class="mr-32 mt-8" v-for="item in menu" :key="item.index" :to="{name: item.routeName}" > {{ item.title }}</RouterLink>
 
   </div>
   <RouterView class="ml-12"/>
-</template>  -->
+</template> 
