@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import pluggin from './plugins.js/pluginn'
 import addviainput from './addviainput.vue'
     const store = createStore ({
     state() {
@@ -44,9 +45,10 @@ import addviainput from './addviainput.vue'
                 pushnewiteminAll ({commit}, payload){
                     commit('pushnewiteminAll', payload)
                 }
-            }   
+            } , 
+          plugins : [pluggin]     
         })
        
-
+ 
 export default store
 
