@@ -1,14 +1,14 @@
-<script setup>
+<!-- <script setup>
    import mainlayout from '../layout/mainlayout.vue';
    import ProductsList from '../components/ProductsList.vue'
    import Menu from '../components/menu.vue';
 </script>
-
+ -->
 
 
 
 <template>
-    <mainlayout>
+    <!-- <mainlayout>
         <template #header >
               <Menu/>
     </template>
@@ -19,6 +19,6 @@
         </div>
         </template>
 
-</mainlayout>
+</mainlayout> -->
   
 </template>

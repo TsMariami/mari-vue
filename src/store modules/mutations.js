@@ -10,7 +10,17 @@ const mutations =  {
        let item = store.getters.getsongs.find(item => item.id === payload)
        store.getters.getwatchlist.push(item)
        store.getters.getsongs.splice(store.getters.getsongs.indexOf(item), 1)
-   },
+   },  
+    pushnewiteminAll(_state, payload){
+    let item = store.getters.getsongs.find(item => item.id === payload)
+    store.getters.getsongs.push({
+      name: store.state.name,
+      description : store.state.description,
+      url : store.state.url,
+      cover: store.state.cover ,
+      // id: this.itemId +1
+    })
+}
 }
 
 export default mutations

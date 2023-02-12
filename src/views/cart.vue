@@ -1,17 +1,17 @@
 <script setup>
-import Cart from '../components/welcome/Cart.vue'
-import Menu from '../components/menu.vue';
-import CartLayout from '../layout/Cartlayout.vue'
+// import Cart from '../components/welcome/Cart.vue'
+// import Menu from '../components/cart.vue';
+// import CartLayout from '../layout/Cartlayout.vue'
 </script>
 
 
 <template>
-    <CartLayout>
+    <!-- <CartLayout>
         <template #CartHeader>
          <Menu />
         </template>
     <template #default>
         cart  <Cart />
     </template>
-</CartLayout>
+</CartLayout> -->
 </template>
