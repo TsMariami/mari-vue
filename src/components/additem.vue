@@ -11,13 +11,8 @@ export default{
        this.itemtitle = null
     }
 },
- 
 }
-
-
 </script>
-
-
 
 <template>
     <form  @submit.prevent="submitItemTolist">

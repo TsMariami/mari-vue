@@ -1,5 +1,4 @@
 <script setup>
-import {computed} from 'vue'
   const props = defineProps({
       item: { type: Object, required:true},
      change: {type: Boolean, required: true},
@@ -11,12 +10,6 @@ import {computed} from 'vue'
    function onDelete(){
     this.$emit("onDelete" , this.item)
    }
-
-//  computed: {
-//      ischecked(){
-//        return this.item.done ?  'checked' : '' 
-//    } 
-  // }
 </script>
 
 

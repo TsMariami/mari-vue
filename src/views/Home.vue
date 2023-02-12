@@ -1,6 +1,6 @@
 <script setup>
   import mainlayout from '../layout/mainlayout.vue';
-  import menu from '../menu.vue';
+  import Menu from '../components/menu.vue';
 </script>
 
 
@@ -8,7 +8,7 @@
 <template>
    <mainlayout>
     <template #header >
-              <menu/>
+              <Menu/>
     </template>
        
     <template #footer>

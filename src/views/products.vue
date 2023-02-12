@@ -1,12 +1,24 @@
 <script setup>
-
-   import ProductsList from '../ProductsList.vue'
+   import mainlayout from '../layout/mainlayout.vue';
+   import ProductsList from '../components/ProductsList.vue'
+   import Menu from '../components/menu.vue';
 </script>
 
 
 
 
 <template>
-    <div>Products</div>
-    <ProductsList />
+    <mainlayout>
+        <template #header >
+              <Menu/>
+    </template>
+    <template #default>
+        <div>
+          Products 
+             <ProductsList />
+        </div>
+        </template>
+
+</mainlayout>
+  
 </template>

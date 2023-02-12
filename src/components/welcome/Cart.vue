@@ -2,7 +2,7 @@
 
 import { useStore } from 'vuex'
 import { computed } from 'vue'
-import ListItemComponent from './ListItemComponent.vue'
+import ListItemComponent from '../ListItemComponent.vue'
 defineProps({
     data: { type: Object, requiered: true },
     title: String
