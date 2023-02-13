@@ -1,12 +1,12 @@
-<!-- <script setup>
+ <script setup>
   import mainlayout from '../layout/mainlayout.vue';
   import Menu from '../components/menu.vue';
-</script> -->
+</script>
 
 
 
 <template>
-   <!-- <mainlayout>
+  <mainlayout>
     <template #header >
               <Menu/>
     </template>
@@ -19,5 +19,5 @@
            <h2> home page </h2>
     
          </template>
-  </mainlayout> -->
+  </mainlayout> 
 </template>

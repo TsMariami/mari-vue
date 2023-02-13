@@ -22,6 +22,4 @@ const routes = [{
     component: cart
 }
 ]
-
-
 export default routes
