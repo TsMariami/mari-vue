@@ -1,10 +1,9 @@
-
 <script setup>
 import actionButton from './actionButton.vue';
 defineProps({
   data: { type: Object, requiered: true },
   action: { type: String, required: false, default: 'add' },
-  title: {title: String }
+  title: { title: String }
 })
 </script>
 <template>
@@ -15,7 +14,6 @@ defineProps({
     - {{ data.name }}
   </div>
   <p class="mt-20 mb-20">
-    <actionButton  :itemId="data.id" :action="action" />
+    <actionButton :itemId="data.id" :action="action" />
   </p>
-  
 </template> 

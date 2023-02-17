@@ -1,5 +1,4 @@
 <script setup>
-
 import { useStore } from 'vuex'
 import ListItemComponent from './ListItemComponent.vue'
 defineProps({
@@ -14,7 +13,6 @@ const data = store.getters.getwatchlist
         <h2 class="font-bold text-xl text-green-600">{{ title }}</h2>
         <ul>
             <ListItemComponent v-for="item in data" :key="item.index" :data="item" action="delete" />
-
         </ul>
     </div>
 </template>

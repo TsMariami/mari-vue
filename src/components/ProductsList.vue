@@ -5,7 +5,6 @@ const store = useStore()
 const data = store.getters.getsongs
 </script>
 <template>
-
     <div class="flex flex-col space-y-2 mx-10 mt-9 ">
         <ListItemComponent v-for="item in data" :key="item.id" :data="item" />
         <div class="mt-84">
