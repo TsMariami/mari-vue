@@ -9,7 +9,6 @@ import apilayout from '../layout/apilayout.vue'
       <Menu />
     </template>
     <template #default>
-      <apilayout/>
     </template>
   </mainlayout>
 </template>     

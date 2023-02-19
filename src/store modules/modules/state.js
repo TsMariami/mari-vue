@@ -1,4 +1,5 @@
-const stateModule = {
+const state = () =>{
+    return{
     songs: [
         { id: 1, name: 'Bohemian Rhapsody', url: "https://www.youtube.com/embed/fJ9rUzIMcZQ", description: 'Bohemian Rhapsody by Queen', cover: "https://ichef.bbci.co.uk/news/976/cpsprodpb/4B19/production/_86352291_bohemianrhapsody.jpg" },
         { id: 2, name: 'Smells Like Teen Spirit', url: "https://www.youtube.com/embed/hTWKbfoikeg", description: "Smells like teen spirit by Nirvana", cover: 'https://i.insider.com/571649b9dd0895954c8b46d3?width=700', },
@@ -9,4 +10,5 @@ const stateModule = {
     watchlist: [],
     currencies: []
 }
-export default stateModule
+}
+export default state
