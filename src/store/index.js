@@ -4,3 +4,4 @@ const store = createStore({
         plugins: [myplugin]
 })
 export default store
+
