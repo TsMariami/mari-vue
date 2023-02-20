@@ -1,4 +1,4 @@
-import store from "../store"
+import store from ".."
 const mutations = {
     deleteitemfromwatchlist(state, payload) {
         let item = store.getters.getwatchlist.find(item => item.id === payload)
