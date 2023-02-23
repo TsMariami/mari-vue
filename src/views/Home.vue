@@ -1,16 +1,16 @@
 <script setup>
 import sticky from '../components/sticky.vue';
 import mainlayout from '../layout/mainlayout.vue';
-import Menu from '../components/menu.vue';
-import Default from '../components/default.vue';
+import menus from '../components/menus.vue';
+import homepage from '../components/homepage.vue';
 </script>
 <template>
   <mainlayout>
     <template #header>
-      <Menu/>
+      <menus/>
       <sticky/>
     </template>
     <template #default>
-     <Default/>
+     <homepage/>
     </template>
 </mainlayout></template>

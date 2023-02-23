@@ -1,11 +1,12 @@
 <script setup>
+
 import mainlayout from '../layout/mainlayout.vue';
-import Menu from '../components/menu.vue';
+import menus from '../components/menus.vue';
 </script>
 <template>
   <mainlayout>
     <template #header>
-      <Menu />
+      <menus />
     </template>
     <template #default>
     </template>

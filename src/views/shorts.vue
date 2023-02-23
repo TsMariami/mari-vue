@@ -7,8 +7,5 @@ import Menu from '../components/menus.vue';
         <template #header>
             <Menu />
         </template>
-        <template #default>
-            <h2> about us </h2>
-        </template>
     </mainlayout>
 </template>

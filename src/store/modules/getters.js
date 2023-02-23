@@ -9,7 +9,7 @@ const getters = {
         return state.currencies
     },
     getvideos(state){
-        return state.songs
+        return state.videos
     }
 }
 export default getters

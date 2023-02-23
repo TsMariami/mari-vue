@@ -1,5 +1,5 @@
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Shorts from '../views/shorts.vue'
 import products from '../views/products.vue'
 import cart from '../views/cart.vue'
 import nbgComponent from '../views/nbgComponent.vue'
@@ -10,9 +10,9 @@ const routes = [{
     component: Home
 },
 {
-    path : '/About',
-    name:'About',
-    component: About
+    path : '/shorts',
+    name:'Shorts',
+    component: Shorts
 },
 {
     path : '/products',
@@ -30,4 +30,5 @@ const routes = [{
     component: nbgComponent
 },
 ]
+
 export default routes

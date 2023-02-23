@@ -1,4 +1,5 @@
 <script setup>
+
 import { useStore } from 'vuex'
 import ListItemComponent from './ListItemComponent.vue'
 defineProps({
