@@ -10,6 +10,12 @@ const getters = {
     },
     getvideos(state){
         return state.videos
+    } ,
+    getcategories(state){
+        return state.categories
+    } ,
+     geticons(state){
+        return state.icons
     }
 }
 export default getters

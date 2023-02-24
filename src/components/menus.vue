@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <nav class="sticky top-0 justify-between flex flex-row bg-white pl-4 h-14 b">
+    <nav class="flex flex-row justify-between  fixed top-0  bg-white pl-4 h-14 ">
         <div class="flex flex-row items-center flex-shrink-0 text-white ">
             <button @click.prevent="showorhide()" class="p-2 hover:bg-gray-200 rounded-3xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-list fill-black mr-  "
@@ -32,10 +32,10 @@ export default {
             </button>
             <img src="src/components/img/youtube.png" alt="youtube" width="105" class="ml-3">
         </div>
-        <div class="mt-2 w-96 ">
+        <div class="mt-2 w-96 ml-96">
             <searchbar />
         </div>
-        <div class="mt-3">
+        <div class="mt-3 ml-96 ">
             <icons />
         </div>
     </nav>

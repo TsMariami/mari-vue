@@ -1,4 +1,5 @@
 <script>
+
 import cards from './cards.vue'
 export default {
     components: { cards }

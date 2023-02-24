@@ -1,6 +1,6 @@
 import Home from '../views/Home.vue'
 import Shorts from '../views/shorts.vue'
-import products from '../views/products.vue'
+import video from '../views/video.vue'
 import cart from '../views/cart.vue'
 import nbgComponent from '../views/nbgComponent.vue'
 
@@ -15,9 +15,9 @@ const routes = [{
     component: Shorts
 },
 {
-    path : '/products',
-    name:'products',
-    component: products
+    path : '/video',
+    name:'video',
+    component: video
 },
 {
     path : '/cart',

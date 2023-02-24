@@ -1,6 +1,5 @@
 <script setup>
 import mainlayout from '../layout/mainlayout.vue';
-import ProductsList from '../components/ProductsList.vue'
 import Menu from '../components/menus.vue';
 </script>
 <template>
@@ -11,7 +10,6 @@ import Menu from '../components/menus.vue';
       <template #default>
          <div>
             Products
-            <ProductsList />
          </div>
       </template>
    </mainlayout>
