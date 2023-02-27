@@ -4,7 +4,7 @@ import searchbar from "./searchbar.vue"
 import icons from './icons.vue'
 import sidebar from './sidebar.vue'
 import sidebar2 from './sidebar2.vue'
-console.log(Menu)
+import Topmenu from "./topmenu.vue"
 export default {
     data: function () {
         return {
@@ -16,7 +16,7 @@ export default {
             this.show = !this.show;
         }
     },
-    components: { searchbar, icons, sidebar, sidebar2 }
+    components: { searchbar, icons, sidebar, sidebar2, Topmenu }
 }
 </script>
 
@@ -30,14 +30,11 @@ export default {
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                 </svg>
             </button>
-            <img src="src/components/img/youtube.png" alt="youtube" width="105" class="ml-3">
+            <a href="http://localhost:5173/">
+                <img src="src/components/img/youtube.png" alt="youtube" width="105" class="ml-3">
+            </a>
         </div>
-        <div class="mt-2 w-96 ml-96">
-            <searchbar />
-        </div>
-        <div class="mt-3 ml-96 ">
-            <icons />
-        </div>
+        <Topmenu />
     </nav>
     <aside id="mySidebar" v-if="show" aria-label="Sidebar">
         <sidebar />

@@ -7,6 +7,10 @@ const actions = {
     },
     pushnewiteminAll({ commit }, payload) {
         commit('pushnewiteminAll', payload)
-    }
+    }, 
+    filtervideos({ commit }, payload) {
+        commit('filtervideos', payload)
+    },
+    
 }
 export default actions

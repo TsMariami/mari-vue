@@ -16,6 +16,15 @@ const getters = {
     } ,
      geticons(state){
         return state.icons
-    }
+    },
+    geticons2(state){
+        return state.icons2
+    },
+     getsearchbaricons(state){
+        return state.searchbaricons
+    },
+    fileteredvideos: (state => (query) => {
+        
+    })
 }
 export default getters

@@ -1,3 +1,18 @@
+import homeicon from '../../components/icons/homeicon.vue'
+import feedbackicon from '../../components/icons/feedbackicon.vue'
+import browseicon from '../../components/icons/browseicon.vue'
+import gamingicon from '../../components/icons/gamingicon.vue'
+import helpicon from '../../components/icons/helpicon.vue'
+import histoyicon from '../../components/icons/histoyicon.vue'
+import musicicon from '../../components/icons/musicicon.vue'
+import reporticon from '../../components/icons/reporticon.vue'
+import settingsicon from '../../components/icons/settingsicon.vue'
+import signin from '../../components/icons/signin.vue'
+import subscicon from '../../components/icons/subscicon.vue'
+import trendingicon from '../../components/icons/trendingicon.vue'
+import searchicon from "../../components/icons/searchicon.vue"
+import micicon from "../../components/icons/micicon.vue"
+
 const state = () => {
     return {
     videos: [
@@ -12,23 +27,25 @@ const state = () => {
         { id: 9, url: 'https://www.youtube.com/embed/T13se_2A7c8', title: 'Pink Floyd - The Great Gig In The Sky', cover: 'src/components/img/card imgs/card10.webp', channelimg: "src/components/img/card imgs/card10.1.jpg" , description: "38M views 1 year ago" , channel: "Pynk Floyd"},
     ],
     icons:  [
-        { id: 1, name: "Home", img: "https://cdn-icons-png.flaticon.com/512/25/25694.png" },
-        { id: 2, name: "Shorts", img:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Youtube_shorts_icon.svg/1649px-Youtube_shorts_icon.svg.png" ,},
-        { id: 3, name: "Subscriptions", img: "src/components/img/subscription.png" },
-        { id: 4, name: 'Library', img: "https://cdn-icons-png.flaticon.com/512/565/565285.png",},
-        { id: 5, name: 'History', img: "https://www.seekpng.com/png/detail/301-3019211_history-comments-history-icon-png.png"},
-        { id: 6, name: 'Trending',  img: "https://spng.pngfind.com/pngs/s/17-171458_fire-logo-flame-symbol-sign-fire-symbol-png.png"},
-        { id: 7, name: 'Music', img: "https://w7.pngwing.com/pngs/274/853/png-transparent-musical-note-icon-music-notes-miscellaneous-logo-monochrome.png"},
-        { id: 8, name: 'Gaming',  img: "https://www.pngfind.com/pngs/m/5-50746_png-file-svg-gaming-console-icon-png-transparent.png"},
-        { id: 9, name: 'Sports', img: "src/components/img/trophy.png"},
-        { id: 10, name: 'Browse channels', img: "https://icons-for-free.com/iconfiles/png/512/circle+more+plus+icon-1320183136549593898.png"},
-        { id: 11, name: 'YouTube Music', img: "src/components/img/icons8-youtube-music-48.png"},
-        { id: 12, name: 'YouTube Kids', img: "src/components/img/kids.png"},
-        { id: 13, name: 'YouTube TV', img: "src/components/img/tv.png"},
-        { id: 14, name: 'Settings',  img: "https://cdn-icons-png.flaticon.com/512/126/126472.png"},
-        { id: 15, name: 'Report history', img: "https://png.pngtree.com/png-vector/20190116/ourlarge/pngtree-vector-flag-icon-png-image_322150.jpg"},
-        { id: 16, name: 'Help', img: "https://cdn-icons-png.flaticon.com/512/0/827.png"},
-        { id: 17, name: 'Send feedback', img: "https://www.iconpacks.net/icons/1/free-warning-icon-1090-thumb.png"},
+        { name: "Home", icon: homeicon},
+        { name: "Shorts" , img:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Youtube_shorts_icon.svg/1649px-Youtube_shorts_icon.svg.png", class:"w-[18px] h-7 mr-2 -ml-1.5"},
+        { name: "Subscriptions", icon: subscicon},
+        { name: 'Library', img: "src/components/img/library.png" , class: 'w-7 -ml-1 mr-1'},
+        { name: 'History',icon: histoyicon },
+        { name: 'sign in', icon: signin},
+        { name: 'Trending',icon: trendingicon},
+        { name: 'Music', icon: musicicon },
+        { name: 'Gaming', icon: gamingicon},
+        { name: 'Sports',img:"src/components/img/trophy.png", class: 'w-5 h-5 mt-0.5 mr-2 -ml-1' },
+        { name: 'Browse channels',icon: browseicon },
+        { name: 'YouTube Music',img:"src/components/img/icons8-youtube-music-48.png",class: 'w-[27px] -ml-1.5 mr-1.5'},
+        { name: 'YouTube Kids', img:"src/components/img/kids.png",class: 'w-11 -ml-3 -mt-1.5'},
+        { name: 'YouTube TV', img:"src/components/img/tv.png",class: 'w-14 -ml-4 -mt-1 -mr-1'},
+        { name: 'Settings', icon: settingsicon },
+        { name: 'Report history',icon: reporticon},
+        { name: 'Help', icon: helpicon},
+        { name: 'Send feedback', icon: feedbackicon},
+        
     ],
     categories: [
         {name:" All" , class: "bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-1 px-4 rounded  inline-flex items-center"},
@@ -41,7 +58,18 @@ const state = () => {
         {name:"Recently uploaded " , class: "bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-1 px-3  rounded  inline-flex items-center"},
         {name:"New to you " , class: "bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-1 px-3  rounded  inline-flex items-center"},
         {name:" Artists" , class: "bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-1 px-3  rounded  inline-flex items-center"},
-    ]
+    ],
+    icons2:  [
+        { name: "Home", icon: homeicon},
+        { name: "Shorts" , img:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Youtube_shorts_icon.svg/1649px-Youtube_shorts_icon.svg.png", class:"w-[18px] h-7 mr-3 -ml-1.5"},
+        { name: "Subscriptions", icon: subscicon},
+        { name: 'Library', img: "src/components/img/library.png" , class: 'w-7 -ml-1 mr-1'},
+    ],
+    searchbaricons: [
+        {name:"search", icon : searchicon},
+        {name:"microphone", icon : micicon},
+    ],
+    filteredvideos : []
 }
    
 }

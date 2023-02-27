@@ -1,4 +1,5 @@
 import store from ".."
+import { ref } from "Vue"
 const mutations = {
     deleteitemfromwatchlist(state, payload) {
         let item = store.getters.getwatchlist.find(item => item.id === payload)
@@ -18,10 +19,14 @@ const mutations = {
             url: store.state.url,
             cover: store.state.cover,
         })
+    },
+    filtervideos(state, payload){
+        state.filteredvideos = state.videos.filter (vidro => video.title.toLowerCase().inclu)
+       
     }
 }
 export default mutations
 
 
 
-
+const searchbar = ref("")
