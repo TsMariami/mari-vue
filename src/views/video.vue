@@ -22,18 +22,15 @@ import Topmenu from '../components/topmenu.vue';
            </a>
         </div>
         <Topmenu/>
-    </nav>
-
+      </nav>
     <nav class="bg-white  dark:bg-gray-900 w-full z-20 w-16 ml-[750px] overflow-scroll">
        <sticky />
     </nav>
-     
     </template>
     <template #default>
      <div class="inline-block">
       <videos />
      </div>
-        
    </template>
 </videolayout>
 </template>

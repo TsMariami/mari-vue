@@ -1,16 +1,11 @@
 const actions = {
-    pushiteminwatchlist({ commit }, payload) {
-        commit('pushiteminwatchlist', payload)
-    },
-    deleteitemfromwatchlist({ commit }, payload) {
-        commit('deleteitemfromwatchlist', payload)
-    },
-    pushnewiteminAll({ commit }, payload) {
-        commit('pushnewiteminAll', payload)
-    }, 
     filtervideos({ commit }, payload) {
-        commit('filtervideos', payload)
+        if(payload.legth >2 ){
+         commit('UPDATE_KEYWORD', payload)   
+     } else{
+            commit('UPDATE_KEYWORD', null)  
+     }
+        
     },
-    
 }
 export default actions

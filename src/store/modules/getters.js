@@ -1,13 +1,4 @@
 const getters = {
-    getsongs(state) {
-        return state.songs
-    },
-    getwatchlist(state) {
-        return state.watchlist
-    },
-    getcurrency(state) {
-        return state.currencies
-    },
     getvideos(state){
         return state.videos
     } ,
@@ -23,8 +14,16 @@ const getters = {
      getsearchbaricons(state){
         return state.searchbaricons
     },
-    fileteredvideos: (state => (query) => {
-        
-    })
+    filtervideos (state) {
+        if(state.keyword !== null){
+            return state.videos.filter(video => video.title.toLowerCase().includes(state.keyword) )
+        } else{
+            return state.videos
+        }
+   
+    } ,
+    //    tagvideos (state) {
+    //         return state.videos.filter(video => video.tags.toLowerCase().includes(state.categories.name) )
+    // }
 }
 export default getters

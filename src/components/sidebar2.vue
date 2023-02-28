@@ -2,7 +2,7 @@
 
 import { useStore } from 'vuex';
  const store = useStore()
-    const icons = store.getters.geticons2
+    const icons = store.getters['geticons2']
 </script>
 
 
@@ -12,11 +12,12 @@ import { useStore } from 'vuex';
                 <li v-for="item in icons " :key="item.index">
                     <a href="#"
                         class="flex flex-row p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <component :is="item.icon"></component>
+                        <component :is="{...item.icon}"></component>
                         <img :src="item.img" alt="" :class="item.class">
                         <span class="text-xs mt-2 -ml-1">{{item.name}}</span>
                     </a>
                 </li>
+                <sign-in></sign-in>
             </ul>
         </div>
 </template>

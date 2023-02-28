@@ -1,8 +1,29 @@
 import Home from '../views/Home.vue'
 import Shorts from '../views/shorts.vue'
 import video from '../views/video.vue'
-import cart from '../views/cart.vue'
-import nbgComponent from '../views/nbgComponent.vue'
+import Subscriptions from '../views/subscriptions.vue'
+import Library from '../views/Library.vue'
+import history from '../views/history.vue'
+import SignIN from '../views/SignIN.vue'
+import trending from '../views/trending.vue'
+import music from '../views/music.vue'
+import gaming from '../views/gaming.vue'
+import sports from '../views/sports.vue'
+import youTubeMusic from '../views/youTubeMusic.vue'
+import youTubeKids from '../views/youTubeKids.vue'
+import settings from '../views/settings.vue'
+import help from '../views/help.vue'
+import feedback from '../views/feedback.vue'
+import browsechannels from  '../views/browsechannels.vue'
+import reporthistory from  '../views/reporthistory.vue'
+import youTubeTV from  '../views/youTubeTV.vue'
+import all from '../views/all.vue'
+import mixes from '../views/mixes.vue'
+import music2 from '../views/music2.vue'
+import PinkFloyd from '../views/PinkFloyd.vue'
+import identity from '../views/identity.vue'
+import artists from '../views/artists.vue'
+
 
 const routes = [{
     path : '/',
@@ -20,15 +41,114 @@ const routes = [{
     component: video
 },
 {
-    path : '/cart',
-    name:'cart',
-    component: cart
+    path : '/subscriptions',
+    name:'Subscriptions',
+    component: Subscriptions
 },
 {
-    path : '/nbg',
-    name:'nbg',
-    component: nbgComponent
+    path : '/library',
+    name:'Library',
+    component: Library
 },
+{
+    path : '/history',
+    name:'History',
+    component: history
+},
+{
+    path : '/signin',
+    name: 'sign in',
+    component: SignIN
+},
+{
+    path : '/trending',
+    name: 'Trending',
+    component: trending
+},
+{
+    path : '/music',
+    name: 'Music',
+    component: music
+},
+{
+    path : '/gaming',
+    name: 'Gaming',
+    component: gaming
+},
+{
+    path : '/sports',
+    name: 'Sports',
+    component: sports
+},
+{
+    path : '/browsechannels',
+    name: 'Browse channels',
+    component: browsechannels
+},
+{
+    path : '/youTubeTV',
+    name: 'YouTube TV',
+    component: youTubeTV
+},
+{
+    path : '/youTubeMusic',
+    name: 'YouTube Music',
+    component: youTubeMusic
+},
+{
+    path : '/youTubeKids',
+    name: 'YouTube Kids',
+    component: youTubeKids
+},
+{
+    path : '/settings',
+    name: 'Settings',
+    component: settings
+},
+{
+    path : '/reporthistory',
+    name: 'Report history',
+    component: reporthistory
+},
+{
+    path : '/help',
+    name: 'Help',
+    component: help
+},
+{
+    path : '/feedback',
+    name: 'Send feedback',
+    component: feedback
+},
+{
+    path : '/',
+    name: " All",
+    component: all
+},
+{
+    path : '/mixes',
+    name: "Mixes " ,
+    component: mixes
+},
+{
+    path : '/music2',
+    name:" Music" ,
+    component: music2
+},
+{
+    path : '/PinkFloyd',
+    name:" Pink Floyd" ,
+    component: PinkFloyd
+},
+{
+    path : '/identity',
+    name:"identity " ,
+    component: identity
+},
+{
+    path : '/artists',
+    name:" Artists" ,
+    component: artists
+}
 ]
-
 export default routes
