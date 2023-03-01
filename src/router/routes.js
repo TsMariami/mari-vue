@@ -23,7 +23,9 @@ import music2 from '../views/music2.vue'
 import PinkFloyd from '../views/PinkFloyd.vue'
 import identity from '../views/identity.vue'
 import artists from '../views/artists.vue'
-
+import account from '../views/Account.vue'
+import info from '../views/Info.vue'
+import update from '../views/Update.vue'
 
 const routes = [{
     path : '/',
@@ -121,7 +123,7 @@ const routes = [{
     component: feedback
 },
 {
-    path : '/',
+    path : '/all',
     name: " All",
     component: all
 },
@@ -149,6 +151,24 @@ const routes = [{
     path : '/artists',
     name:" Artists" ,
     component: artists
+},
+{
+    path: '/account',
+    name: 'accountinfo',
+    component: account,
+    children: [
+        {
+            path : '/accountinfo',
+            name:"information" ,
+            component: info
+        },
+        {
+            path : '/updateinfo',
+            name:"update" ,
+            component: update
+        },
+    ]
+    
 }
 ]
 export default routes

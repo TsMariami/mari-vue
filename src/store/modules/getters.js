@@ -1,29 +1,29 @@
 const getters = {
-    getvideos(state){
+    getvideos(state) {
         return state.videos
-    } ,
-    getcategories(state){
+    },
+    getcategories(state) {
         return state.categories
-    } ,
-     geticons(state){
+    },
+    geticons(state) {
         return state.icons
     },
-    geticons2(state){
+    geticons2(state) {
         return state.icons2
     },
-     getsearchbaricons(state){
+    getsearchbaricons(state) {
         return state.searchbaricons
     },
-    filtervideos (state) {
-        if(state.keyword !== null){
-            return state.videos.filter(video => video.title.toLowerCase().includes(state.keyword) )
-        } else{
+    filtervideos(state){
+        if (state.keyword !== null) {
+            return state.videos.filter(video => video.title.toLowerCase().includes(state.keyword))
+        } else {
             return state.videos
         }
-   
-    } ,
-    //    tagvideos (state) {
-    //         return state.videos.filter(video => video.tags.toLowerCase().includes(state.categories.name) )
-    // }
+
+    },
+    tagvideos(state) {
+        return state.videos.filter(video => video.tag.toLowerCase().includes(state.categories.name))
+    }
 }
 export default getters

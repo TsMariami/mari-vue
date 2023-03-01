@@ -1,11 +1,7 @@
-<script>
-import searchbar from './searchbar.vue'
-import icons from './icons.vue';
-export default {
-    components: { searchbar, icons, }
-}
+<script setup>
+import searchbar from './SearchBar.vue'
+import icons from './Icons.vue';
 </script>
-
 <template>
         <div class="mt-2 w-96 ml-[268px] bg-white">
             <searchbar />

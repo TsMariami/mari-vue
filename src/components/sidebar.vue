@@ -1,8 +1,5 @@
-<script>
-import sidebaritems from './sidebarItems.vue'
-export default {
-    components: { sidebaritems }
-}
+<script setup>
+import sidebaritems from './SidebarItems.vue'
 </script>
 <template>
   <aside>

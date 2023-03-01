@@ -1,5 +1,4 @@
 <script setup>
-
 import { useStore } from 'vuex';
  const store = useStore()
     const buttons = store.getters.getcategories

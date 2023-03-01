@@ -1,9 +1,5 @@
-<script>
-
-import cards from './cards.vue'
-export default {
-    components: { cards }
-}
+<script setup>
+import cards from './Cards.vue'
 </script>
 
 <template>

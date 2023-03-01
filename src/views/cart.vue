@@ -1,6 +1,6 @@
 <script setup>
-import Menu from '../components/menus.vue';
-import CartLayout from '../layout/Cartlayout.vue'
+import Menu from '../components/Menus.vue';
+import CartLayout from '../layout/CartLayout.vue'
 </script>
 <template>
     <CartLayout>

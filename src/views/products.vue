@@ -1,6 +1,6 @@
 <script setup>
-import mainlayout from '../layout/mainlayout.vue';
-import Menu from '../components/menus.vue';
+import mainlayout from '../layout/MainLayout.vue';
+import Menu from '../components/Menus.vue';
 </script>
 <template>
    <mainlayout>

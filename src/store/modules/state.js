@@ -12,6 +12,7 @@ import trendingicon from '../../components/icons/trendingicon.vue'
 import searchicon from "../../components/icons/searchicon.vue"
 import micicon from "../../components/icons/micicon.vue"
 
+
 const state = () => {
     return {
     keyword: null ,
@@ -65,7 +66,6 @@ const state = () => {
         {name:"microphone", icon : micicon},
     ],
 }
-   
 }
 
 export default state

@@ -1,8 +1,8 @@
 <script setup>
-import sticky from '../components/sticky.vue';
-import videolayout from '../layout/videolayout.vue';
-import videos from '../components/videos.vue'
-import Topmenu from '../components/topmenu.vue';
+import sticky from '../components/Sticky.vue';
+import videolayout from '../layout/VideoLayout.vue';
+import videos from '../components/Videos.vue'
+import Topmenu from '../components/TopMenu.vue';
 
 </script>
 <template>

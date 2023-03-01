@@ -1,8 +1,5 @@
-<script>
-import Signin from './icons/signin.vue';
-export default {
-    components: { Signin }
-}
+<script setup>
+import Signin from './icons/SignIn.vue';
 </script>
 
 <template>

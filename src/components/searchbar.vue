@@ -1,9 +1,6 @@
-<script>
-import searchbarcomp from './searchbarcomp.vue'
-import miccomp from './miccomp.vue';
-export default {
-    components: { searchbarcomp, miccomp }
-}
+<script setup>
+import searchbarcomp from './SearchBarComp.vue'
+import miccomp from './MicComp.vue';
 </script>
 <template>
     <div class="mb-4 xl:  ">

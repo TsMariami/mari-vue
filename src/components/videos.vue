@@ -3,7 +3,6 @@ import { useStore } from 'vuex';
 const store = useStore()
 const video = store.getters.getvideos
 </script>
-
 <template>
     <div class="container inline-block pt-16 flex flex-col ">
         <video width="1000" controls class="inline-block pl-20 mb-3">

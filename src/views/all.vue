@@ -1,8 +1,8 @@
 <script setup>
-import sticky from '../components/sticky.vue';
-import mainlayout from '../layout/mainlayout.vue';
-import menus from '../components/menus.vue';
-import TAGS from '../components/TAGS.vue';
+import sticky from '../components/Sticky.vue';
+import mainlayout from '../layout/MainLayout.vue';
+import menus from '../components/Menus.vue';
+import TAGS from '../components/Tags.vue';
 </script>
 <template>
   <mainlayout>
