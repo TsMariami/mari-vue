@@ -21,9 +21,9 @@
                     </a>
                 </li>
             </ul>
-            
+           <router-view/> 
     </div>
 </aside>
 <div>
-    <router-view/>
+    
 </div></template>
