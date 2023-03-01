@@ -1,7 +1,9 @@
 <script setup>
 import { useStore } from 'vuex';
  const store = useStore()
-    const buttons = store.getters.getcategories
+    const buttons = store.getters['tagvideos']
+    console.log(buttons)
+    
 </script>
 <template>
     <nav

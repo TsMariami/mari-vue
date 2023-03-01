@@ -12,5 +12,6 @@ import TAGS from '../components/Tags.vue';
     </template>
     <template #default>
      <TAGS/>
+     <sticky/>
     </template>
 </mainlayout></template>

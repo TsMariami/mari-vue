@@ -5,7 +5,7 @@ const actions = {
      } else{
             commit('UPDATE_KEYWORD', null)  
      }
-        
+     console.log(payload)
     },
 }
 export default actions

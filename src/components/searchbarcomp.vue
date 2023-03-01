@@ -8,9 +8,6 @@ const filter = ref(null)
 watch(filter, (payload) => {
     store.dispatch('filtervideos', payload)
 })
-onMounted(() => {
-    console.log(filter)
-})
 
 </script>
 

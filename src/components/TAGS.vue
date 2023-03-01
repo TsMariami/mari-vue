@@ -3,6 +3,7 @@ import { useStore } from 'vuex';
 const store = useStore()
 const video = store.getters['tagvideos']
 console.log(video)
+
 </script>
 <template>
      <div class="w-full max-w-xs text-center mt-8" v-for="item in video" :key="item.index">

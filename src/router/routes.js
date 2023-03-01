@@ -122,6 +122,12 @@ const routes = [{
     name: 'Send feedback',
     component: feedback
 },
+{ 
+    path: '/all',
+    name: " All",
+    component: all
+
+},
 {
     path : '/all',
     name: " All",
@@ -158,12 +164,12 @@ const routes = [{
     component: account,
     children: [
         {
-            path : '/accountinfo',
+            path : 'accountinfo',
             name:"information" ,
             component: info
         },
         {
-            path : '/updateinfo',
+            path : 'updateinfo',
             name:"update" ,
             component: update
         },

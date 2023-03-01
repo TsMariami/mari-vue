@@ -23,7 +23,15 @@ const getters = {
 
     },
     tagvideos(state) {
-        return state.videos.filter(video => video.tag.toLowerCase().includes(state.categories.name))
+        const tags = ['all']
+        for (const videos of state.videos){
+            for(const tag of videos.tag){
+                if (!tags.includes(tag)){
+                    tags.push(tag)
+                }
+            }
+        }
+      return tags 
     }
 }
 export default getters
