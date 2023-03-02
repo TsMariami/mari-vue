@@ -2,10 +2,9 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
  const store = useStore()
-    const buttons = store.getters['getVideosByTag']
-    console.log(buttons)
+    // console.log(buttons)
     const stickytags = computed(() => store.getters['getVideosByTag'])
-    const updateTags = (tag) => store.commit('UPDATE_TAG', tag)
+    const updateTags = () => store.commit('UPDATE_TAG')
     // const change
 </script>
 <template>
@@ -17,10 +16,10 @@ import { useStore } from 'vuex';
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
                     class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md: font-normal md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ml-10">
-                   <li class=" rounded-3xl " v-for="item in buttons" :key="item.index">
+                   <li class=" rounded-3xl " v-for="item in stickytags" :key="item.index">
                     <!-- <RouterLink :to="{ name: item.name }"> -->
-                            <a href="#" aria-current="page"><button :class="item.class">
-                                    <span @click="updateTags()">{{ item.name }} </span>
+                            <a href="#" aria-current="page"><button  @click="updateTags()" :class="item.class">
+                                    <span>{{ item.name }} bla</span>
                                 </button>
                             </a>
                         <!-- </RouterLink> -->
