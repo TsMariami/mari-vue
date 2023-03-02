@@ -1,5 +1,4 @@
 
-
 const userModule = {
     state() {
         return {
@@ -41,7 +40,10 @@ const userModule = {
             state.users.find(state.authentication).name = payload.name
             state.users.find(state.authentication).password = payload.password
             state.users.find(state.authentication).email = payload.email
-        }
+        },
+        REGISTER(state, payload) {
+        state.users.push(payload)
+    }
     },
     actions: {
         authentication({ commit }, payload) {
@@ -49,6 +51,11 @@ const userModule = {
         },
         updateinfo({ commit }, payload) {
             commit('UPDATE_INFO', payload)
+        }, 
+        updateinfo({ commit }, payload) {
+            commit('REGISTER', payload)
+            commit('AUTHENTICATON', payload)
+            
         },
     }
 
@@ -57,3 +64,4 @@ const userModule = {
 
 
 }
+export default userModule
