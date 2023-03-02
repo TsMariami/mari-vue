@@ -20,10 +20,13 @@
                         </RouterLink>
                     </a>
                 </li>
-            </ul>
-           <router-view/> 
+            </ul>      
     </div>
 </aside>
+<div class=" ml-[280px]">
+   <router-view/>  
+</div>
+ 
 <div>
     
 </div></template>

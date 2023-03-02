@@ -1,5 +1,5 @@
 <script setup>
-import sticky from '../components/sticky.vue';
+import sticky from '../components/Sticky.vue';
 import mainlayout from '../layout/mainlayout.vue';
 import menus from '../components/menus.vue';
 import homepage from '../components/homepage.vue';

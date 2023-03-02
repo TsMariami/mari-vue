@@ -17,12 +17,12 @@ import feedback from '../views/feedback.vue'
 import browsechannels from  '../views/browsechannels.vue'
 import reporthistory from  '../views/reporthistory.vue'
 import youTubeTV from  '../views/youTubeTV.vue'
-import all from '../views/all.vue'
-import mixes from '../views/mixes.vue'
-import music2 from '../views/music2.vue'
-import PinkFloyd from '../views/PinkFloyd.vue'
-import identity from '../views/identity.vue'
-import artists from '../views/artists.vue'
+// import all from '../views/all.vue'
+// import mixes from '../views/mixes.vue'
+// import music2 from '../views/music2.vue'
+// import PinkFloyd from '../views/PinkFloyd.vue'
+// import identity from '../views/identity.vue'
+// import artists from '../views/artists.vue'
 import account from '../views/Account.vue'
 import info from '../views/Info.vue'
 import update from '../views/Update.vue'
@@ -122,42 +122,42 @@ const routes = [{
     name: 'Send feedback',
     component: feedback
 },
-{ 
-    path: '/all',
-    name: " All",
-    component: all
+// {
+//     path : '/:tags',
+//     name: 'tags',
+//     component: Home
+// },
+// { 
+//     path: '/all',
+//     name: " All",
+//     component: all
 
-},
-{
-    path : '/all',
-    name: " All",
-    component: all
-},
-{
-    path : '/mixes',
-    name: "Mixes " ,
-    component: mixes
-},
-{
-    path : '/music2',
-    name:" Music" ,
-    component: music2
-},
-{
-    path : '/PinkFloyd',
-    name:" Pink Floyd" ,
-    component: PinkFloyd
-},
-{
-    path : '/identity',
-    name:"identity " ,
-    component: identity
-},
-{
-    path : '/artists',
-    name:" Artists" ,
-    component: artists
-},
+// },
+// {
+//     path : '/mixes',
+//     name: "Mixes " ,
+//     component: mixes
+// },
+// {
+//     path : '/music2',
+//     name:" Music" ,
+//     component: music2
+// },
+// {
+//     path : '/PinkFloyd',
+//     name:" Pink Floyd" ,
+//     component: PinkFloyd
+// },
+// {
+//     path : '/identity',
+//     name:"identity " ,
+//     component: identity
+// },
+// {
+//     path : '/artists',
+//     name:" Artists" ,
+//     component: artists
+// },
 {
     path: '/account',
     name: 'accountinfo',

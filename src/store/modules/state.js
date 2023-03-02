@@ -65,6 +65,13 @@ const state = () => {
         {name:"search", icon : searchicon},
         {name:"microphone", icon : micicon},
     ],
+    tags: 'all',
+    info: [
+        {
+           name: 'Mariam' , Surname: 'Tsertsvadze' , email: 'user@example.com '
+        }
+       
+    ]
 }
 }
 

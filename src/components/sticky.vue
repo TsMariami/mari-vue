@@ -1,9 +1,12 @@
 <script setup>
+import { computed } from 'vue';
 import { useStore } from 'vuex';
  const store = useStore()
-    const buttons = store.getters['tagvideos']
+    const buttons = store.getters['getVideosByTag']
     console.log(buttons)
-    
+    const stickytags = computed(() => store.getters['getVideosByTag'])
+    const updateTags = (tag) => store.commit('UPDATE_TAG', tag)
+    // const change
 </script>
 <template>
     <nav
@@ -15,12 +18,12 @@ import { useStore } from 'vuex';
                 <ul
                     class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md: font-normal md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ml-10">
                    <li class=" rounded-3xl " v-for="item in buttons" :key="item.index">
-                    <RouterLink :to="{ name: item.name }">
+                    <!-- <RouterLink :to="{ name: item.name }"> -->
                             <a href="#" aria-current="page"><button :class="item.class">
-                                    <span>{{ item.name }}</span>
+                                    <span @click="updateTags()">{{ item.name }} </span>
                                 </button>
                             </a>
-                        </RouterLink>
+                        <!-- </RouterLink> -->
                     </li>
                 </ul>
             </div>

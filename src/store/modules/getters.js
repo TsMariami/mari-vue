@@ -22,16 +22,11 @@ const getters = {
         }
 
     },
-    tagvideos(state) {
-        const tags = ['all']
-        for (const videos of state.videos){
-            for(const tag of videos.tag){
-                if (!tags.includes(tag)){
-                    tags.push(tag)
-                }
-            }
-        }
-      return tags 
+    getVideosByTag(state){
+        return state.videos.filter((video) => video.tag.includes(state.tags) )
+    },
+    getInfo(state){
+        return state.info
     }
 }
 export default getters
