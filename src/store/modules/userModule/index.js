@@ -52,9 +52,9 @@ const userModule = {
             }
         },
         UPDATE_INFO(state, payload) {
-            state.users.find(state.authentication).name = payload.name
-            state.users.find(state.authentication).password = payload.password
-            state.users.find(state.authentication).email = payload.email
+            state.users.find(state.authenticated).name = payload.name
+            state.users.find(state.authenticated).password = payload.password
+            state.users.find(state.authenticated).email = payload.email
         },
         REGISTER(state, payload) {
             state.users.push(payload)
