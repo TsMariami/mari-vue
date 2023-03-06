@@ -20,6 +20,8 @@ import youTubeTV from  '../views/youTubeTV.vue'
 import account from '../views/Account.vue'
 import info from '../views/Info.vue'
 import update from '../views/Update.vue'
+import Authenticate from '../views/Authenticate.vue'
+import Signup from '../views/Signup.vue'
 
 const routes = [{
     path : '/',
@@ -131,8 +133,21 @@ const routes = [{
             name:"update" ,
             component: update
         },
+    
     ]
     
-}
+},
+{
+    path : '/authenticate',
+    name: 'authenticate',
+    component: Authenticate,
+
+},
+{
+    path : '/signup',
+    name:"signup" ,
+    component: Signup
+ },
+
 ]
 export default routes

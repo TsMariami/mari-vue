@@ -5,6 +5,6 @@ const actions = {
      } else{
             commit('UPDATE_KEYWORD', null)  
      }
-    },
+    },  
 }
 export default actions

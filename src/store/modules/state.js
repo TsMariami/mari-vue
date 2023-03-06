@@ -25,7 +25,7 @@ const state = () => {
         { id: 6, url: 'https://www.youtube.com/embed/8uD6s-X3590', title: 'Harry Styles - Sweet Creature', cover: 'src/components/img/card imgs/crad6.webp', channelimg: "src/components/img/card imgs/crad6.1.jpg" , description: "529M views 4 years ago" , channel: "Harry Styles" , tag: ['all', 'music'] },
         { id: 7, url: 'https://www.youtube.com/embed/GWGbOjlJDk', title: 'Who are you?', cover: 'src/components/img/card imgs/card7.webp',  channelimg: "src/components/img/card imgs/card7.1.jpg" , description: "50M views 1 year ago", channel: "Identity" , tag: ['all','identity' ]},
         { id: 8, url: 'https://www.youtube.com/embed/a4iCLIgIsng', title: 'The Beatles - Here Comes The Sun', cover: 'src/components/img/card imgs/card8.webp', channelimg: "src/components/img/card imgs/card8.1.jpg" , description: "906M views 14 year ago" ,channel: "The Beatles" , tag:['all', 'music', 'artist' ]},
-        { id: 9, url: 'https://www.youtube.com/embed/T13se_2A7c8', title: 'Pink Floyd - The Great Gig In The Sky', cover: 'src/components/img/card imgs/card10.webp', channelimg: "src/components/img/card imgs/card10.1.jpg" , description: "38M views 1 year ago" , channel: "Pynk Floyd"  , tag: ['all', 'pink', 'floyd'] },
+        { id: 9, url: 'https://www.youtube.com/embed/T13se_2A7c8', title: 'Pink Floyd - The Great Gig In The Sky', cover: 'src/components/img/card imgs/card10.webp', channelimg: "src/components/img/card imgs/card10.1.jpg" , description: "38M views 1 year ago" , channel: "Pynk Floyd"  , tag: ['all', 'pink floyd'] },
     ],
     icons:  [
         { name: "Home", icon: homeicon},
@@ -66,6 +66,14 @@ const state = () => {
         {name:"microphone", icon : micicon},
     ],
     tags: 'all',
+    info: [
+        {
+            name: 'Mariam',
+            Surname: 'Tsertsvadze',
+            email: 'user@example.com '
+        },
+
+    ],
 
 }
 }

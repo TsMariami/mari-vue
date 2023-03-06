@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import {  ref, watch } from 'vue'
 import { useStore } from 'vuex';
 const store = useStore()
 const icons = store.getters.getsearchbaricons

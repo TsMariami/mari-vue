@@ -4,36 +4,51 @@ const userModule = {
         return {
             users: [
                 {
-                    id: 1, name: 'Mariam', password: 'Tsertsvadze', email: 'user@example.com '
+                    id: 1,
+                    name: 'Mariam',
+                    password: 'Tsertsvadze',
+                    email: 'user@example.com '
                 },
                 {
-                    id: 2, name: 'Mariam1', password: 'Tsertsvadze', email: 'user1@example.com '
+                    id: 2,
+                    name: 'Mariam1',
+                    password: 'Tsertsvadze',
+                    email: 'user1@example.com '
                 },
                 {
-                    id: 3, name: 'Mariam2', password: 'Tsertsvadze', email: 'user2@example.com '
+                    id: 3,
+                    name: 'Mariam2',
+                    password: 'Tsertsvadze',
+                    email: 'user2@example.com '
                 },
                 {
-                    id: 4, name: 'Mariam3', password: 'Tsertsvadze', email: 'user3@example.com '
+                    id: 4,
+                    name: 'Mariam3',
+                    password: 'Tsertsvadze',
+                    email: 'user3@example.com '
                 },
                 {
-                    id: 5, name: 'Mariam4', password: 'Tsertsvadze', email: 'user4@example.com '
+                    id: 5,
+                    name: 'Mariam4',
+                    password: 'Tsertsvadze',
+                    email: 'user4@example.com '
                 },
 
             ],
-            authentication: null
+            authenticated: null
         }
 
     },
     getters: {
         authentication(state) {
-            return state.authentication
+            return state.authenticated
         }
     },
     mutations: {
-        AUTHENTICATON(state, payload) {
-            let newUser = state.users.filter(value => value.email === payload.email)
-            if (newUser.password === payload.password) {
-                state.authentication = newUser
+        AUTHENTICATION(state, payload) {
+            let User = state.users.filter(value => value.email === payload.email)
+            if (User.password === payload.password) {
+                state.authenticated = User
             }
         },
         UPDATE_INFO(state, payload) {
@@ -42,20 +57,20 @@ const userModule = {
             state.users.find(state.authentication).email = payload.email
         },
         REGISTER(state, payload) {
-        state.users.push(payload)
-    }
+            state.users.push(payload)
+        }
     },
     actions: {
         authentication({ commit }, payload) {
-            commit('AUTHENTICATON', payload)
+            commit('AUTHENTICATION', payload)
         },
         updateinfo({ commit }, payload) {
             commit('UPDATE_INFO', payload)
-        }, 
-        updateinfo({ commit }, payload) {
+        },
+        registration({ commit }, payload) {
             commit('REGISTER', payload)
             commit('AUTHENTICATON', payload)
-            
+
         },
     }
 

@@ -23,7 +23,7 @@ const getters = {
 
     },
     getVideosByTag(state){
-        return state.videos.filter((video) => video.tag.includes(state.tags) )
+        return state.videos.filter(video => video.tag.includes(state.tags) )
     },
     getInfo(state){
         return state.info

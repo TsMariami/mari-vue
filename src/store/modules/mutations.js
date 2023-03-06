@@ -4,7 +4,7 @@ const mutations = {
        
     },
     UPDATE_TAG(state, tag){
-      state.tag = tag
+      state.categories = tag
     }
 }
 export default mutations

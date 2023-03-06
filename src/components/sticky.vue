@@ -2,10 +2,11 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
  const store = useStore()
-    // console.log(buttons)
-    const stickytags = computed(() => store.getters['getVideosByTag'])
+   
+    const stickytags = computed(() => store.getters['getcategories'])
     const updateTags = () => store.commit('UPDATE_TAG')
-    // const change
+    // const change 
+    // console.log('UPDATE_TAG')
 </script>
 <template>
     <nav
@@ -18,8 +19,8 @@ import { useStore } from 'vuex';
                     class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md: font-normal md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ml-10">
                    <li class=" rounded-3xl " v-for="item in stickytags" :key="item.index">
                     <!-- <RouterLink :to="{ name: item.name }"> -->
-                            <a href="#" aria-current="page"><button  @click="updateTags()" :class="item.class">
-                                    <span>{{ item.name }} bla</span>
+                            <a href="#" aria-current="page"><button  @click.prevent="updateTags()" :class="item.class">
+                                    <span>{{ item.name }} </span>
                                 </button>
                             </a>
                         <!-- </RouterLink> -->
