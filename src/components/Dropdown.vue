@@ -1,4 +1,5 @@
 <script setup>
+
 import { ref } from 'vue'
 
 const show = ref(true)
@@ -22,12 +23,12 @@ const showOrHide = () => {
 
     <div  v-if="show" id="dropdown" class="z-10 hidden bg-gray-400 divide-y divide-gray-100 rounded-lg shadow w-44 fixed top-[109px] dark:bg-gray-700">
         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-           <!-- <li>
-                 <RouterLink :to="{ name: 'accountinfo' }" class=""> 
+           <li>
+                 <RouterLink :to="{ name: 'dashboard' }" class=""> 
                 <a href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account</a>
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                 </RouterLink> 
-            </li> -->
+            </li> 
             <li>
               <RouterLink :to="{ name: 'signup' }" > 
                 <a href="#"
@@ -35,7 +36,7 @@ const showOrHide = () => {
                     </RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'authenticate' }" class=""> 
+              <RouterLink :to="{ name: 'signin' }" class=""> 
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
                 in</a>
               </RouterLink>

@@ -2,46 +2,21 @@
 const userModule = {
     state() {
         return {
-            users: [
+            user: [
                 {
-                    id: 1,
-                    name: 'Mariam',
-                    password: 'Tsertsvadze',
-                    email: 'user@example.com '
-                },
-                {
-                    id: 2,
-                    name: 'Mariam1',
-                    password: 'Tsertsvadze',
-                    email: 'user1@example.com '
-                },
-                {
-                    id: 3,
-                    name: 'Mariam2',
-                    password: 'Tsertsvadze',
-                    email: 'user2@example.com '
-                },
-                {
-                    id: 4,
-                    name: 'Mariam3',
-                    password: 'Tsertsvadze',
-                    email: 'user3@example.com '
-                },
-                {
-                    id: 5,
-                    name: 'Mariam4',
-                    password: 'Tsertsvadze',
-                    email: 'user4@example.com '
-                },
+                  name: ' ',  
+                  email: ' ',
+                  password: ' ', 
+                }
+            
 
-            ],
-            authenticated: null
+            ],  
         }
 
     },
     getters: {
         authentication(state) {
-            return state.authenticated
+            return state.user
         }
     },
     mutations: {
@@ -51,13 +26,13 @@ const userModule = {
                 state.authenticated = User
             }
         },
-        UPDATE_INFO(state, payload) {
-            state.users.find(state.authenticated).name = payload.name
-            state.users.find(state.authenticated).password = payload.password
-            state.users.find(state.authenticated).email = payload.email
-        },
         REGISTER(state, payload) {
-            state.users.push(payload)
+            state.user.name = payload.name
+            state.user.password = payload.password
+            state.user.email = payload.email
+        },
+        REGISTER2(state, payload) {
+            state.user.push(payload)
         }
     },
     actions: {
@@ -69,7 +44,7 @@ const userModule = {
         },
         registration({ commit }, payload) {
             commit('REGISTER', payload)
-            commit('AUTHENTICATON', payload)
+            // commit('AUTHENTICATON', payload)
 
         },
     }
