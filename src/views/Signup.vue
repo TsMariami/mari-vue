@@ -1,7 +1,10 @@
 <script setup>
 import axios from 'axios';
+import { useStore } from 'vuex';
 import routes from '../router/routes';
   
+const store = useStore()
+
 const router = routes
 
  const name = ""
@@ -16,9 +19,9 @@ function submit(){
     }
     axios.post('https://items.magischer.de/api/auth/register' , data)
     .then(res => {
+       
         console.log(res.data)
-        // state.push(data)
-        router.push( {name: "signin" } )
+        // router.push( {name: "signin" } )
     })
 }
 // import { useStore } from 'vuex';

@@ -73,14 +73,6 @@ const state = () => {
                 email: 'user@example.com '
             },
         ],
-        credentials: [
-            {
-                name: '',
-                Surname: '',
-                email: ' '
-            }
-
-        ]
 
     }
 }

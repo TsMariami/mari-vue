@@ -22,8 +22,9 @@ import update from '../views/Update.vue'
 import Signin from '../views/Signin.vue'
 import Signup from '../views/Signup.vue'
 import Dashboard from '../views/Dashboard.vue'
-import Users from '../views/Users.vue'
+import Users from '../views/categories/index.vue'
 import Userinfo from '../views/Userinfo.vue'
+import Create from '../views/categories/Create.vue'
 
 const routes = [{
     path: '/',
@@ -164,7 +165,11 @@ const routes = [{
         },
     ]
 },
-
+{
+    path: '/create',
+    name: "create",
+    component: Create
+},
 
 
 

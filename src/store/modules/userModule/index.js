@@ -1,7 +1,9 @@
 
 const userModule = {
+    namespaced: true,
     state() {
         return {
+            token: null, 
             user: [
                 {
                   name: ' ',  
@@ -33,11 +35,19 @@ const userModule = {
         },
         REGISTER2(state, payload) {
             state.user.push(payload)
-        }
+        } ,
+        SAVE_TOKEN(state, token) {
+            state.token = token
+        },
+         SAVE_USER(state, user) {
+            state.user = user
+        },
     },
     actions: {
         authentication({ commit }, payload) {
-            commit('AUTHENTICATION', payload)
+            commit('SAVE_TOKEN', payload.token)
+            commit('SAVE_USER', payload.user)
+            console.log(payload)
         },
         updateinfo({ commit }, payload) {
             commit('UPDATE_INFO', payload)
