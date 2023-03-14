@@ -19,7 +19,7 @@ function signin() {
         .then(res => {
             if (res.data.status) {
                 store.dispatch('user/authentication', res.data).then(
-                    router.push({ name: "users" }) 
+                    // this.router.push({ name: "dashboard" }) 
                 )
                 // console.log(res.data)
                 // state.push(data)

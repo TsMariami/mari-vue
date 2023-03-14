@@ -26,7 +26,7 @@ const editButton = async (id) => {
     }
 }
 
-const deleteUser = async (id) => await store.dispatch('user/deleteUser', id)
+const deleteUser = async (id) =>  await store.dispatch('user/deleteUser', id)
 const updateUser = async (data) => await store.dispatch('user/editUser', data)
 
 

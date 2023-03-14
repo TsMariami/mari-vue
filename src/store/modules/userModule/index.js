@@ -3,6 +3,7 @@ const userModule = {
     namespaced: true,
     state() {
         return {
+            apiurl: import.meta.env.VITE_BASE_API_URL,
             token: null,
             user: {},
             users: []
@@ -69,9 +70,9 @@ const userModule = {
             ).catch(e => console.log(e));
             dispatch('getUsers');
         },
-        async deleteUser({ getters, dispatch }, id) {
+        async deleteUser({ getters, dispatch, state }, id) {
             await axios.delete(
-                'https://items.magischer.de/api/categories',{id},
+                `https://items.magischer.de/api/categories/${id}`,
                 {
                     headers: {
                         Accept: "application/json",
@@ -84,7 +85,7 @@ const userModule = {
         async editUser({ getters, dispatch }, user) {
             console.log(user)
             await axios.put(
-                'https://items.magischer.de/api/categories/${user.id}',
+                `https://items.magischer.de/api/categories/${user.id}`,
                 {
                     name: user.name,
                     type: "news",

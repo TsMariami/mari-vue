@@ -20,7 +20,7 @@ function submit(){
     axios.post('https://items.magischer.de/api/auth/register' , data)
     .then(res => {
         console.log(res.data)
-        router.push( {name: "signin" } )
+        router.push( '/' )
     })
 }
 
