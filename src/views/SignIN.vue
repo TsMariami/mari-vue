@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useStore } from 'vuex';
+import routes from '../router/routes';
 
+const  router = routes
 const store = useStore()
 
 const email = ref('')
@@ -16,7 +18,9 @@ function signin() {
     axios.post("https://items.magischer.de/api/auth/login", data)
         .then(res => {
             if (res.data.status) {
-                store.dispatch('user/authentication', res.data)
+                store.dispatch('user/authentication', res.data).then(
+                    router.push({ name: "users" }) 
+                )
                 // console.log(res.data)
                 // state.push(data)
                 // router.push({ name: "signin" })
@@ -43,7 +47,7 @@ function signin() {
     <section class=" bg-gray-50 dark:bg-gray-900 w-[600px] ml-[450px]">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div
-                class="w-full bg-red-400 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                class="w-full bg-blue-400 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                         Sign in to your account
@@ -79,7 +83,7 @@ function signin() {
                                 password?</a>
                         </div>
                         <button @click.prevent="signin()" type="submit"
-                            class="w-full text-black bg-red-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
+                            class="w-full text-black bg-blue-700 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
                             in</button>
                         <p class="text-sm font-light text-gray-900 dark:text-gray-900">
                             Don’t have an account yet?
