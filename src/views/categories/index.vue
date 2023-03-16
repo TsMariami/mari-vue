@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { useStore } from 'vuex';
 import { computed } from 'vue';
 import { onMounted } from 'vue';
@@ -7,32 +6,12 @@ import Navbar from '../../components/Navbar.vue';
 const store = useStore()
 
 
+const deleteUser = async (id) =>await store.dispatch('user/deleteUser', id)
 
-const update = ref({})
-const editedName = ref('')
-
-const editButton = async (id) => {
-    if (update.value[id]) {
-        delete update.value[id];
-        const data = {
-            id,
-            name: editedName.value,
-        };
-        await updateUser(data);
-        editedName.value = '';
-    } 
-    else {
-        update.value[id] = true;
-    }
-}
-
-const deleteUser = async (id) =>  await store.dispatch('user/deleteUser', id)
-const updateUser = async (data) => await store.dispatch('user/editUser', data)
 
 
 
 const users = computed(() => store.getters['user/getusers'])
-
 
 const showOrHide = () => {
     var x = document.getElementById("popup-modal");
@@ -62,18 +41,10 @@ onMounted(() => store.dispatch('user/getUsers'))
             <tbody>
                 <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700 " v-for="item in users">
                     <td scope="row" class=" ">
-                        <!-- <RouterLink :to="{ name: 'userinfo' }"> -->
-                            <span v-if="!update[users.id]"
+                            <span 
                                 class=" flex flex-col font-bold text-2xl text-blue-600 " :key="item?.index">
                                 {{ item?.name }}
                             </span>
-                            <div v-else class="flex">
-                            <input type="text" v-model="editedName" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Edit Name" >
-                            <button  @click.prevent="editButton(users.id)" type="button" class="py-2.5 px-5 ml-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Save</button>
-                            <button  @click.prevent="editButton(users.id)" type="button" class="py-2.5 px-5 ml-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
-                            
-                        </div>
-                        <!-- </RouterLink> -->
                     </td>
                     <td class="border text-center ">
                         <span class=" flex flex-col font-bold text-2xl text-blue-600 " :key="item?.index">
@@ -81,8 +52,10 @@ onMounted(() => store.dispatch('user/getUsers'))
                         </span>
                     </td>
                     <td  class="border text-center ">
-                        <button @click.prevent="editButton(users.id)" type="button"
+                        <RouterLink :to="{ name: 'Edit categories', params:{ id:item?.id } }">
+                        <button type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit</button>
+                        </RouterLink>
                     </td>
                     <td scope="row" class=" px-9 py-4  w-32">
                         <button @click.prevent="showOrHide()" data-modal-target="popup-modal"

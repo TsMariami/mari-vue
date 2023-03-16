@@ -1,3 +1,15 @@
+<script setup>
+import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
+
+const store = useStore()
+const router = useRouter()
+const logout = async () => {
+   await store.dispatch('user/logOut', )
+   router.push({name: 'signin'})
+}
+</script>
+
 <template>
   <nav class="bg-blue-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -17,24 +29,24 @@
             </Routerlink>
           </li>
           <li>
-            <RouterLink :to="{ name: 'create' }"
+            <RouterLink :to="{ name: 'Categories index' }"
               class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              Add
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink :to="{ name: 'users' }"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              dashboard
+              Categories
             </Routerlink>
           </li>
           <li>
-            <RouterLink :to="{ name: 'create' }">
+            <RouterLink :to="{ name: 'Create categories' }">
               <button
                 class="-mt-[12px] bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                 Add new Category
               </button>
             </RouterLink>
+          </li>  
+          <li>
+              <button @click.prevent="logout()"
+                class="-mt-[12px] bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                log out
+              </button>
           </li>
         </ul>
       </div>

@@ -1,11 +1,11 @@
 <script setup>
 import axios from 'axios';
 import { useStore } from 'vuex';
-import routes from '../router/routes';
+import {useRouter} from 'vue-router';
 import Navbar from '../components/Navbar.vue';
 const store = useStore()
 
-const router = routes
+const router = useRouter()
 
  const name = ""
  const email = ""

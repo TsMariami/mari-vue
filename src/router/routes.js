@@ -1,30 +1,15 @@
 import Home from '../views/Home.vue'
-import account from '../views/Account.vue'
-import info from '../views/Info.vue'
-import Signin from '../views/Signin.vue'
-import Signup from '../views/Signup.vue'
-import Dashboard from '../views/Dashboard.vue'
-import Users from '../views/categories/index.vue'
+import Signin from '../views/SignIn.vue'
+import Signup from '../views/SignUp.vue'
+import Index from '../views/categories/index.vue'
 import Create from '../views/categories/Create.vue'
+import { RouterView } from 'vue-router'
+import Edit from '../views/categories/Edit.vue'
 
 const routes = [{
     path: '/',
     name: 'Home',
     component: Home
-},
-{
-    path: '/account',
-    name: 'accountinfo',
-    component: account,
-    children: [
-        {
-            path: 'accountinfo',
-            name: "information",
-            component: info
-        },
-
-    ]
-
 },
 {
     path: '/signup',
@@ -40,24 +25,31 @@ const routes = [{
 
 {
     path: '/dashboard',
-    name: "dashboard",
-    component: Dashboard,
+    component: RouterView,
     children: [
         {
-            path: 'users',
-            name: "users",
-            component: Users,
+            path: 'categories',
+            component: RouterView,
+            children: [
+                {
+                    path: "",
+                    name: "Categories index",
+                    component: Index
+                },
+                {
+                    path: 'create',
+                    name: "Create categories",
+                    component: Create
+                },
+                 {
+                    path: ':id/edit',
+                    name: "Edit categories",
+                    component:  Edit,
+                    props:true
+                },
+            ]
         },
     ]
 },
-{
-    path: '/create',
-    name: "create",
-    component: Create
-},
-
-
-
-
 ]
 export default routes
