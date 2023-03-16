@@ -1,6 +1,7 @@
 <script setup>
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
+import Dropdown from './Dropdown.vue';
 
 const store = useStore()
 const router = useRouter()
@@ -47,6 +48,7 @@ const logout = async () => {
                 class="-mt-[12px] bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                 log out
               </button>
+              <Dropdown/>
           </li>
         </ul>
       </div>

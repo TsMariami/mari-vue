@@ -17,7 +17,8 @@ const userModule = {
         },
         getToken(state) {
             return state.token
-        }
+        },
+           
     },
     mutations: {
         REGISTER2(state, payload) {
